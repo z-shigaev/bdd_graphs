@@ -9,7 +9,7 @@ class MainWindow(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)  # Это нужно для инициализации нашего дизайна
-        self.data = data_frame.Graph()
+        self.data = data_frame.RawData("data/test.csv")
         # раздел "Файл"
         self.actionOpen.triggered.connect(self.load_files)
         self.actionSave.triggered.connect(self.test)
@@ -22,7 +22,6 @@ class MainWindow(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
             print(error)
             pass
         file_name = QtWidgets.QFileDialog.getOpenFileName(self, "Открыть файл", home_dir + "\\Data")[0]
-
 
     def test(self):
         print("Good!")
