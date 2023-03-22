@@ -17,7 +17,7 @@ class RawData:
             print(error)
         return data
 
-    def get_labels(self):
+    def get_headers(self):
         return self.data.columns
 
 
@@ -25,4 +25,4 @@ if __name__ == "__main__":
     test = RawData("data/test.csv")
     # print(test.data)
     # print(test.get_labels())
-    # print(len(test.get_labels()))
+    # print(len(test.get_headers()))
