@@ -20,9 +20,13 @@ class RawData:
     def get_headers(self):
         return self.data.columns
 
+    def get_column(self, header):
+        return self.data[header].tolist()
+
 
 if __name__ == "__main__":
     test = RawData("data/test.csv")
     # print(test.data)
-    # print(test.get_labels())
+    print(test.get_headers())
     # print(len(test.get_headers()))
+    print(test.get_column(test.get_headers()[1]))

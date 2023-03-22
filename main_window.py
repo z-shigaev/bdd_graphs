@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setContentsMargins(-1, -1, -1, 0)
         self.horizontalLayout.setSpacing(10)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.mainFrame = QtWidgets.QFrame(self.centralwidget)
+        self.mainFrame = PlotWidget(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -86,3 +86,4 @@ class Ui_MainWindow(object):
         self.menuOpen.setTitle(_translate("MainWindow", "Файл"))
         self.actionOpen.setText(_translate("MainWindow", "Открыть"))
         self.actionSave.setText(_translate("MainWindow", "Сохранить"))
+from pyqtgraph import PlotWidget

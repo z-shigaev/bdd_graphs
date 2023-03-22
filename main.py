@@ -2,6 +2,8 @@ import data_frame
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QTableWidgetItem, QCheckBox, QPushButton
 from PyQt5.QtCore import Qt
+import pyqtgraph as pg
+import numpy as np
 import main_window
 import sys
 import os
@@ -47,6 +49,9 @@ class MainWindow(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
         for i in range(0, self.table_rows):
             if self.tableLabels.item(i, 0).checkState() == 2:
                 self.test()
+            x = np.random.normal(size=1000)
+            y = np.random.normal(size=1000)
+            self.mainFrame.plot(x, y)
 
         pass
         # print(self.headers)

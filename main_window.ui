@@ -30,7 +30,7 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QFrame" name="mainFrame">
+       <widget class="PlotWidget" name="mainFrame">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -135,6 +135,14 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QFrame</extends>
+   <header>pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
